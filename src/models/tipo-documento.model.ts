@@ -1,7 +1,7 @@
 import {Entity, model, property} from '@loopback/repository';
 
 @model()
-export class TipoMovimiento extends Entity {
+export class TipoDocumento extends Entity {
   @property({
     type: 'string',
     required: true,
@@ -22,7 +22,7 @@ export class TipoMovimiento extends Entity {
   id?: string;
 
 
-  constructor(data?: Partial<TipoMovimiento>) {
+  constructor(data?: Partial<TipoDocumento>) {
     super(data);
   }
 }
@@ -31,4 +31,4 @@ export interface TipoMovimientoRelations {
   // describe navigational properties here
 }
 
-export type TipoMovimientoWithRelations = TipoMovimiento & TipoMovimientoRelations;
+export type TipoMovimientoWithRelations = TipoDocumento & TipoMovimientoRelations;
